@@ -60,3 +60,30 @@
         }
     </style>
 </head>
+<body>
+
+<div class="calculator">
+    <h2>Advanced Calculator</h2>
+    
+    <input type="number" id="num1" placeholder="Enter number 1">
+    <input type="number" id="num2" placeholder="Enter number 2">
+    
+    <select id="operation">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
+        <option value="power">Power</option>
+        <option value="sqrt">Square Root</option>
+        <option value="remainder">Remainder</option>
+        <option value="factorial">Factorial</option>
+        <option value="absolute">Absolute Value</option>
+        <option value="log">Logarithm</option>
+        <option value="exp">Exponential</option>
+        <option value="percentage">Percentage</option>
+    </select>
+    
+    <button onclick="calculate()">Calculate</button>
+    
+    <h3>Result: <span id="result">-</span></h3>
+</div>
