@@ -87,3 +87,68 @@
     
     <h3>Result: <span id="result">-</span></h3>
 </div>
+<script>
+    function calculate() {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+        const operation = document.getElementById('operation').value;
+        
+        let result;
+        
+        switch (operation) {
+            case 'add':
+                result = num1 + num2;
+                break;
+            case 'subtract':
+                result = num1 - num2;
+                break;
+            case 'multiply':
+                result = num1 * num2;
+                break;
+            case 'divide':
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    alert('Cannot divide by zero!');
+                    return;
+                }
+                break;
+            case 'power':
+                result = Math.pow(num1, num2);
+                break;
+            case 'sqrt':
+                result = Math.sqrt(num1);
+                break;
+            case 'remainder':
+                result = num1 % num2;
+                break;
+            case 'factorial':
+                result = factorial(num1);
+                break;
+            case 'absolute':
+                result = Math.abs(num1);
+                break;
+            case 'log':
+                result = Math.log10(num1);
+                break;
+            case 'exp':
+                result = Math.exp(num1);
+                break;
+            case 'percentage':
+                result = (num1 / num2) * 100;
+                break;
+        }
+        
+        document.getElementById('result').innerText = result.toFixed(2);
+    }
+    
+    function factorial(n) {
+        if (n === 0 || n === 1) {
+            return 1;
+        }
+        for (let i = n - 1; i >= 1; i--) {
+            n *= i;
+        }
+        return n;
+    }
+</script>
